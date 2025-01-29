@@ -12,6 +12,11 @@ with open('MOCK_DATA.csv', 'rb') as file:
 # Read the CSV file with the detected encoding
 df = pd.read_csv('MOCK_DATA.csv', encoding=encoding)
 
+
+'''
+# This code does the following!
+'''
+
 # Remove rows where last_name is empty or null
 df = df.dropna(subset=['last_name'])
 df = df[df['last_name'].str.strip() != '']
